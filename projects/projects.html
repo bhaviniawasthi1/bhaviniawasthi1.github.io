@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects | Bhavini</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Bhavini Awasthi</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <h2 class="logo">Bhavini</h2>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="../skills.html">Skills</a></li>
-    <li><a href="../achievements.html">Achievements</a></li>
-    <li><a href="../contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Projects</h1>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="section">
-  <h1>Projects</h1>
-  <p>Project details will be added incrementally.</p>
-</section>
+  <section class="section">
+    <h2>Highlighted Projects</h2>
+
+    <!-- PROJECT 1 -->
+    <div class="card">
+      <h3>API-Based Task Management & Rate-Limited Backend Service</h3>
+      <p><strong>Tech Stack:</strong> Java, REST APIs, Spring Boot, JUnit, Git, Linux</p>
+
+      <ul>
+        <li>Designed and implemented RESTful APIs to perform CRUD operations on tasks with proper validation and error handling.</li>
+        <li>Integrated in-memory rate limiting to control API request throughput and simulate backend protection mechanisms.</li>
+        <li>Structured the application using layered architecture (Controller, Service, Repository) to improve maintainability.</li>
+        <li>Wrote unit tests using JUnit to validate core business logic and handle edge cases.</li>
+        <li>Gained hands-on experience with API-driven backend development workflows.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="card">
+      <h3>Scalable In-Memory Cache & Rate Limiter</h3>
+      <p><strong>Tech Stack:</strong> Java, Data Structures, Concurrency</p>
+
+      <ul>
+        <li>Implemented a thread-safe LRU cache supporting O(1) get and put operations using HashMap and Doubly Linked List.</li>
+        <li>Designed a token-bucket based rate limiter to simulate real-world traffic control scenarios.</li>
+        <li>Handled concurrency concerns using synchronization techniques to ensure data consistency.</li>
+        <li>Focused on performance trade-offs, correctness, and scalability.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="card">
+      <h3>Distributed Task Scheduler</h3>
+      <p><strong>Tech Stack:</strong> Java, Multithreading, Priority Queues</p>
+
+      <ul>
+        <li>Built a priority-based task scheduler supporting multi-worker execution.</li>
+        <li>Implemented retry handling and simulated task failure scenarios to improve fault tolerance.</li>
+        <li>Optimized scheduling logic to improve throughput and execution efficiency.</li>
+        <li>Analyzed latency vs resource trade-offs while designing scheduler components.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="card">
+      <h3>Ride Matching & Dynamic Pricing System</h3>
+      <p><strong>Tech Stack:</strong> Java, Algorithms, System Design</p>
+
+      <ul>
+        <li>Designed a greedy algorithm-based ride matching system to minimize passenger wait time.</li>
+        <li>Implemented demand-supply driven dynamic pricing logic.</li>
+        <li>Simulated real-world ride-hailing backend decision-making processes.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Bhavini Awasthi | Backend & Systems Projects</p>
+  </footer>
 
 </body>
 </html>
