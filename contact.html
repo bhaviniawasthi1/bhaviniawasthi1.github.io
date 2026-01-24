@@ -77,7 +77,98 @@
       </div>
 
     </section>
+
+    <!-- ===== DIRECT MESSAGE (EMAILJS) ===== -->
+    <section class="message-section">
+      <h2>Send Me a Message</h2>
+    
+      <form id="contact-form" class="message-form">
+    
+        <!-- Honeypot field (SPAM PROTECTION – DO NOT REMOVE) -->
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+    
+        <label>
+          Your Name
+          <input type="text" name="from_name" required />
+        </label>
+    
+        <label>
+          Your Email
+          <input type="email" name="reply_to" required />
+        </label>
+    
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+    
+        <button type="submit">Send Message</button>
+    
+        <p id="form-status" class="form-status"></p>
+      </form>
+    </section>
+
   </main>
+
+  <!-- ===== EMAILJS SDK ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  
+  <script>
+    // Initialize EmailJS with your PUBLIC KEY
+    (function () {
+      emailjs.init("u5KapaHViql78r9gg");
+    })();
+
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      /* ---------------- SPAM PROTECTION ---------------- */
+
+      // 1️⃣ Honeypot check (bots fill hidden fields)
+      if (form.website.value !== "") {
+        return; // silently block spam
+      }
+
+      // 2️⃣ Rate limiting (1 message per 30 seconds)
+      const lastSent = localStorage.getItem("lastMessageTime");
+      const now = Date.now();
+
+      if (lastSent && now - lastSent < 30000) {
+        status.textContent = "Please wait before sending another message.";
+        status.style.color = "red";
+        return;
+      }
+
+      /* ------------------------------------------------- */
+
+      status.textContent = "Sending message...";
+      status.style.color = "#333";
+
+      emailjs
+        .sendForm(
+          "service_nf7xyw6",   // SERVICE ID
+          "template_15pad4k",  // TEMPLATE ID
+          form
+        )
+        .then(
+          function () {
+            status.textContent = "Message sent successfully. Thank you!";
+            status.style.color = "green";
+            form.reset();
+            localStorage.setItem("lastMessageTime", now);
+          },
+          function (error) {
+            status.textContent =
+              "Failed to send message. Please try again later.";
+            status.style.color = "red";
+            console.error("EmailJS Error:", error);
+          }
+        );
+    });
+  </script>
 
 </body>
 </html>
