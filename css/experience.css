@@ -1,0 +1,694 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #e5e7eb;
+  background:
+    radial-gradient(1000px 500px at 10% -20%, rgba(20,184,166,0.12), transparent),
+    radial-gradient(900px 400px at 90% 0%, rgba(168,85,247,0.12), transparent),
+    #020617;
+}
+
+/* HERO */
+.experience-hero {
+  padding: 4.5rem 2rem 3.5rem;
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: rgba(20,184,166,0.18);
+  color: #5eead4;
+  margin-bottom: 1rem;
+}
+
+.experience-hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #14b8a6, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.experience-hero p {
+  max-width: 720px;
+  margin: auto;
+  color: #cbd5f5;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3.5rem 2rem;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  margin-bottom: 2.5rem;
+}
+
+
+/* CERTS */
+.cert-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.cert-card {
+  padding: 1.6rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #94a3b8;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-down {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.reveal-down.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== EXPERIENCE (REFINED STYLE) ===== */
+
+.exp-card.refined {
+  padding: 2.6rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top accent bar */
+.exp-card.refined::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #14b8a6, #f59e0b);
+}
+
+/* Header layout */
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.6rem;
+}
+
+.exp-header h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+
+.exp-header .org {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.exp-header .time {
+  font-size: 0.85rem;
+  color: #fbbf24;
+  white-space: nowrap;
+}
+
+/* Bullet points */
+.exp-points {
+  padding-left: 1.2rem;
+}
+
+.exp-points li {
+  margin-bottom: 0.7rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+.exp-section {
+  margin-top: 1.5rem; /* adjust: 1.5rem – 3rem as you like */
+}
+
+/* ===== EXPERIENCE VISUAL ENHANCEMENTS ===== */
+
+/* Glow layer (Projects-style depth) */
+.exp-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(20,184,166,0.35),
+    rgba(168,85,247,0.35),
+    rgba(245,158,11,0.25)
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+
+/* Ensure content stays above glow */
+.exp-card.refined > * {
+  position: relative;
+  z-index: 1;
+}
+
+.exp-card.refined:hover .exp-glow {
+  opacity: 0.45;
+}
+
+.exp-card.refined:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.55);
+}
+
+/* ===== ROLE TAGS ===== */
+.exp-tags {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.exp-tags span {
+  padding: 0.3rem 0.85rem;
+  font-size: 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(20,184,166,0.25),
+    rgba(168,85,247,0.25)
+  );
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+/* ===== HEADER TIME ACCENT ===== */
+.exp-header .time {
+  background: rgba(245,158,11,0.15);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245,158,11,0.4);
+}
+
+/* ================= POSITIONS OF RESPONSIBILITY ================= */
+
+.por-section {
+  margin-top: 2.5rem;
+}
+
+/* Grid */
+.por-grid {
+  display: grid;
+  gap: 2.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card */
+.por-card.vibrant {
+  position: relative;
+  padding: 2.4rem 2.2rem;
+  border-radius: 26px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.025)
+  );
+
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* Glow layer */
+.por-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 28px;
+
+  background: linear-gradient(
+    135deg,
+    #14b8a6,
+    #a855f7,
+    #f59e0b
+  );
+
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Bring content above glow */
+.por-card.vibrant > *:not(.por-glow) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover */
+.por-card.vibrant:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 45px 95px rgba(0,0,0,0.55);
+}
+
+.por-card.vibrant:hover .por-glow {
+  opacity: 0.55;
+}
+
+/* Text styling */
+.por-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #f8fafc;
+}
+
+.por-org {
+  color: #cbd5f5;
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+}
+
+.por-time {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: rgba(245,158,11,0.18);
+  border: 1px solid rgba(245,158,11,0.4);
+  color: #fde68a;
+  font-weight: 500;
+}
+
+
+/* ===== ORG PILL (TIMELINE STYLE) ===== */
+.por-org-pill {
+  display: inline-block;
+  margin: 0.5rem 0 0.9rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+
+  background: rgba(20,184,166,0.15);
+  border: 1px solid rgba(20,184,166,0.35);
+  color: #5eead4;
+  font-weight: 500;
+}
+
+/* ===== COLLAPSIBLE IMPACT (PROJECTS STYLE) ===== */
+.por-impact {
+  margin: 0.6rem 0 1.2rem;
+  border-radius: 14px;
+
+  background: rgba(20,184,166,0.12);
+  border: 1px solid rgba(20,184,166,0.25);
+  padding: 0.7rem 0.9rem;
+}
+
+.por-impact summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #5eead4;
+  list-style: none;
+}
+
+.por-impact summary::marker {
+  display: none;
+}
+
+.por-impact summary::after {
+  content: "＋";
+  float: right;
+}
+
+.por-impact[open] summary::after {
+  content: "−";
+}
+
+/* Impact chips reuse palette */
+.impact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+}
+
+.impact-strip span {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.7rem;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(20,184,166,0.25),
+    rgba(168,85,247,0.25)
+  );
+  color: #f8fafc;
+}
+
+.por-era {
+  grid-column: 1 / -1;
+  margin: rem 0 5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #cbd5f5;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ================= ACHIEVEMENTS ================= */
+
+.achievements-section {
+  margin-top: 3.5rem;
+}
+
+.achievements-grid {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card */
+.achievement-card {
+  position: relative;
+  padding: 2.4rem;
+  border-radius: 26px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.025)
+  );
+
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  overflow: hidden;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Glow layer */
+.achievement-card .achieve-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 28px;
+
+  background: linear-gradient(
+    135deg,
+    #14b8a6,
+    #a855f7,
+    #f59e0b
+  );
+
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Content above glow */
+.achievement-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover */
+.achievement-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 45px 95px rgba(0,0,0,0.55);
+}
+
+.achievement-card:hover .achieve-glow {
+  opacity: 0.55;
+}
+
+/* Featured (Scholarship) */
+.achievement-card.featured {
+  grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+  .achievement-card.featured {
+    grid-column: span 1;
+  }
+}
+
+/* Tag */
+.achieve-tag {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.7rem;
+  border-radius: 999px;
+
+  background: rgba(20,184,166,0.18);
+  border: 1px solid rgba(20,184,166,0.35);
+  color: #5eead4;
+  font-weight: 600;
+}
+
+/* Text */
+.achievement-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #f8fafc;
+}
+
+.achievement-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #cbd5f5;
+  margin-bottom: 1.2rem;
+}
+
+/* Year pill */
+.achieve-year {
+  display: inline-block;
+  padding: 0.35rem 0.95rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+
+  background: rgba(245,158,11,0.18);
+  border: 1px solid rgba(245,158,11,0.4);
+  color: #fde68a;
+  font-weight: 500;
+}
+
+/* ================= CERTIFICATIONS (PREMIUM) ================= */
+
+.cert-section {
+  margin-top: 4rem;
+}
+
+.cert-subtitle {
+  max-width: 720px;
+  margin: -1.5rem auto 3rem;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Grid */
+.cert-grid.premium {
+  display: grid;
+  gap: 2.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Card */
+.cert-card.premium {
+  position: relative;
+  padding: 2.6rem 2.4rem;
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.025)
+    );
+
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.14);
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Glow layer */
+.cert-card.premium .cert-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #14b8a6,
+    #a855f7,
+    #f59e0b
+  );
+
+  opacity: 0;
+  filter: blur(22px);
+  transition: opacity 0.45s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Lift on hover */
+.cert-card.premium:hover {
+  transform: translateY(-10px) scale(1.025);
+  box-shadow:
+    0 50px 110px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.16);
+}
+
+.cert-card.premium:hover .cert-glow {
+  opacity: 0.6;
+}
+
+/* Content above glow */
+.cert-card.premium > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Badge */
+.cert-badge {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  padding: 0.45rem 1.1rem;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(20,184,166,0.25),
+    rgba(168,85,247,0.25)
+  );
+  color: #f8fafc;
+}
+
+/* Text */
+.cert-card.premium h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #f8fafc;
+  line-height: 1.35;
+}
+
+.cert-provider {
+  font-size: 1rem;
+  color: #cbd5f5;
+}
+
+
+/* ===== CENTERED CERT CARD ===== */
+
+.cert-with-pdf.centered {
+  text-align: center;
+}
+
+/* spacing tweaks for centered layout */
+.cert-with-pdf.centered h3 {
+  margin-bottom: 0.9rem;
+}
+
+.cert-with-pdf.centered .achieve-year {
+  margin-bottom: 1.2rem;
+}
+
+/* center the link */
+.cert-with-pdf.centered .cert-link {
+  display: inline-block;
+}
+
+/* reuse previous PDF button styles */
+.cert-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  color: #5eead4;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+
+  border: 1px solid rgba(20,184,166,0.35);
+  background: rgba(20,184,166,0.12);
+
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              background 0.25s ease;
+}
+
+.cert-link:hover {
+  background: rgba(20,184,166,0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(20,184,166,0.35);
+}
+
+.cert-provider-pill {
+  display: inline-block;
+  margin-bottom: 1.1rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #cbd5f5;
+}
+
+

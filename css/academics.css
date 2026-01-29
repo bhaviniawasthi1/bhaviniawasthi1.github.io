@@ -1,0 +1,525 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #e5e7eb;
+  background:
+    radial-gradient(1000px 500px at 10% -20%, rgba(20,184,166,0.12), transparent),
+    radial-gradient(900px 400px at 90% 0%, rgba(168,85,247,0.12), transparent),
+    #020617;
+}
+
+/* HERO */
+.academics-page .academics-hero {
+  padding: 4.5rem 2rem 3.5rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: rgba(20,184,166,0.18);
+  color: #5eead4;
+  margin-bottom: 1rem;
+}
+
+.academics-page .academics-hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #14b8a6, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.academics-page .academics-hero p {
+  max-width: 720px;
+  margin: auto;
+  color: #cbd5f5;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* SECTIONS */
+.academics-page section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3.5rem 2rem;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  margin-bottom: 2.5rem;
+}
+
+/* EDUCATION */
+.edu-timeline {
+  display: grid;
+  gap: 2.6rem;
+}
+
+.edu-card {
+  position: relative;
+  padding: 2.8rem;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025));
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 35px 80px rgba(0,0,0,0.5);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.edu-card.premium {
+  border-left: 5px solid #14b8a6;
+}
+
+.edu-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #14b8a6, #a855f7, #f59e0b);
+  opacity: 0;
+  filter: blur(22px);
+  transition: opacity 0.4s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 50px 110px rgba(0,0,0,0.6);
+}
+
+.edu-card:hover .edu-glow {
+  opacity: 0.6;
+}
+
+.edu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  gap: 1rem;
+}
+
+.edu-time {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: rgba(245,158,11,0.18);
+  border: 1px solid rgba(245,158,11,0.4);
+  color: #fde68a;
+}
+
+.edu-metrics {
+  margin-top: 1.6rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.metric-value {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #14b8a6, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   COURSEWORK – PREMIUM
+================================ */
+
+.course-clusters {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Card */
+.course-card {
+  position: relative;
+  padding: 2.6rem 2.6rem 2.8rem;
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.025)
+    );
+
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  overflow: hidden;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Accent strip */
+.course-accent {
+  position: absolute;
+  inset: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #14b8a6,
+    #a855f7,
+    #f59e0b
+  );
+}
+
+/* Hover lift */
+.course-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 45px 95px rgba(0,0,0,0.6);
+}
+
+/* Title */
+.course-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  color: #f8fafc;
+}
+
+/* Subtitle */
+.course-subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-bottom: 1.4rem;
+  line-height: 1.6;
+}
+
+/* List */
+.course-list {
+  list-style: none;
+  padding: 0;
+}
+
+.course-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+}
+
+/* Bullet dot */
+.course-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5eead4;
+}
+
+/* Highlight primary card slightly */
+.course-card.premium {
+  border-left: 4px solid #14b8a6;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .course-card {
+    padding: 2.2rem;
+  }
+}
+
+/* ===============================
+   TECHNICAL SKILLS – PREMIUM
+================================ */
+
+.skills-matrix {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Panel */
+.skill-panel {
+  position: relative;
+  padding: 2.4rem 2.2rem 2.6rem;
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.025)
+    );
+
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  overflow: hidden;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Accent strip */
+.skill-accent {
+  position: absolute;
+  inset: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #14b8a6,
+    #a855f7,
+    #f59e0b
+  );
+}
+
+/* Hover */
+.skill-panel:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 45px 95px rgba(0,0,0,0.6);
+}
+
+/* Title */
+.skill-panel h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+  color: #f8fafc;
+}
+
+/* Chips */
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.skill-chips span {
+  padding: 0.45rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(20,184,166,0.25),
+    rgba(168,85,247,0.25)
+  );
+
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+/* Highlight primary panel (Languages) */
+.skill-panel.primary {
+  border-left: 4px solid #14b8a6;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .skill-panel {
+    padding: 2rem;
+  }
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-down {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.reveal-down.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   EDUCATION – COMPACT SECONDARY
+================================ */
+
+/* Grid for XII + X */
+.edu-secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Compact card variant */
+.edu-card.compact {
+  padding: 2rem 2.1rem;
+}
+
+/* Slightly reduce hierarchy */
+.edu-card.compact h3 {
+  font-size: 1.05rem;
+}
+
+.edu-card.compact .edu-org {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.edu-card.compact .edu-meta {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Reduce hover intensity (still premium) */
+.edu-card.compact:hover {
+  transform: translateY(-5px) scale(1.015);
+}
+
+/* Mobile fallback */
+@media (max-width: 800px) {
+  .edu-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   SMALL METRIC (X / XII)
+================================ */
+
+.compact-metric {
+  margin-top: 0.9rem;
+}
+
+.metric-value.small {
+  font-size: 1.55rem;          /* smaller than CGPA */
+  font-weight: 700;
+  line-height: 1.1;
+
+  background: linear-gradient(
+    135deg,
+    #5eead4,
+    #a855f7
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* keep label subtle */
+.compact-metric .metric-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* ===============================
+   INLINE SCHOOL + PERCENTAGE
+================================ */
+
+.edu-inline-metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.9rem;
+}
+
+/* School name (left) */
+.edu-inline-metric .edu-school {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  line-height: 1.4;
+  max-width: 75%;
+}
+
+/* Percentage (right, enhanced but subtle) */
+.metric-value.small {
+  font-size: 1.55rem;
+  font-weight: 700;
+  white-space: nowrap;
+
+  background: linear-gradient(
+    135deg,
+    #5eead4,
+    #a855f7
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mobile safety */
+@media (max-width: 500px) {
+  .edu-inline-metric {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}
+
+/* ===============================
+   HOVER ANIMATIONS – COURSES & SKILLS
+================================ */
+
+/* Shared hover base */
+.course-card,
+.skill-panel {
+  will-change: transform, box-shadow;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+/* Lift + depth */
+.course-card:hover,
+.skill-panel:hover {
+  transform: translateY(-10px) scale(1.025);
+  box-shadow: 0 55px 120px rgba(0,0,0,0.65);
+}
+
+/* Accent strip animation */
+.course-card .course-accent,
+.skill-panel .skill-accent {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform-origin: left;
+}
+
+/* Slide accent slightly on hover */
+.course-card:hover .course-accent,
+.skill-panel:hover .skill-accent {
+  transform: scaleX(1.05);
+  opacity: 0.9;
+}
+
+/* Chip micro interaction */
+.skill-chips span {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-panel:hover .skill-chips span {
+  transform: translateY(-2px);
+}
+
+/* Course list bullets animate subtly */
+.course-list li {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.course-card:hover .course-list li {
+  transform: translateX(4px);
+  color: #e5e7eb;
+}

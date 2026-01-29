@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects | Bhavini Awasthi</title>
+  <meta name="description" content="Scalable backend systems, schedulers, APIs, and engineering projects by Bhavini Awasthi." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Ambient Background -->
+  <div class="particles"></div>
+
+  <!-- Navbar -->
+  <header>
+    <div id="navbar-placeholder"></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="projects-hero">
+    <span class="pill reveal reveal-down">Engineering • Systems • Backend</span>
+    <h1 class="reveal reveal-down">Projects I’ve Built</h1>
+    <p class="reveal reveal-down">
+      From concurrency-safe caches to distributed schedulers —
+      these projects reflect how I think, design, and build systems.
+    </p>
+  </section>
+
+  <!-- CORE PROJECTS -->
+  <section class="projects-section">
+    <h2 class="section-title reveal">Core System Projects</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <h3>Scalable In-Memory Cache & Rate Limiter</h3>
+        <p>
+          Thread-safe <strong>LRU cache</strong> with O(1) access and a
+          <strong>token-bucket rate limiter</strong> simulating real backend traffic.
+        </p>
+        <ul>
+          <li>Concurrency-safe shared memory handling</li>
+          <li>HashMap + Doubly Linked List design</li>
+          <li>High-throughput request throttling</li>
+        </ul>
+
+        <details class="learned">
+          <summary>What I learned</summary>
+          <p>
+            How real systems enforce fairness, avoid race conditions,
+            and why simple data structures scale better than complex abstractions.
+          </p>
+        </details>
+
+        <div class="tech-stack">
+          <span>Java</span><span>DSA</span><span>Concurrency</span>
+        </div>
+
+        <a href="https://github.com/bhaviniawasthi1/scalable-cache-rate-limiter" target="_blank">View Code →</a>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>RESTful API Management System</h3>
+        <p>
+          Layered <strong>REST backend</strong> supporting CRUD operations
+          with SQL persistence and clean API contracts.
+        </p>
+        <ul>
+          <li>Controller–Service–Repository separation</li>
+          <li>HTTP status & JSON handling</li>
+          <li>Database-backed persistence</li>
+        </ul>
+
+        <details class="learned">
+          <summary>What I learned</summary>
+          <p>
+            The importance of separation of concerns,
+            consistent API behavior, and designing for long-term maintainability.
+          </p>
+        </details>
+
+        <div class="tech-stack">
+          <span>Java</span><span>REST</span><span>SQL</span>
+        </div>
+
+        <a href="https://github.com/bhaviniawasthi1/restful-task-management-api" target="_blank">View Code →</a>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>Ride Matching & Dynamic Pricing System</h3>
+        <p>
+          Algorithm-driven ride allocation with
+          <strong>demand–supply based pricing</strong>.
+        </p>
+        <ul>
+          <li>Greedy matching to minimize wait time</li>
+          <li>Dynamic pricing simulation</li>
+          <li>Fairness vs efficiency trade-offs</li>
+        </ul>
+
+        <details class="learned">
+          <summary>What I learned</summary>
+          <p>
+            How algorithmic choices impact fairness,
+            system behavior, and user experience at scale.
+          </p>
+        </details>
+
+        <div class="tech-stack">
+          <span>Java</span><span>Algorithms</span><span>System Design</span>
+        </div>
+
+        <a href="https://github.com/bhaviniawasthi1/ride-matching-dynamic-pricing-system" target="_blank">View Code →</a>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>Distributed Task Scheduler</h3>
+        <p>
+          Priority-based scheduler simulating
+          <strong>multi-worker execution</strong> with retries.
+        </p>
+        <ul>
+          <li>Priority queues for task ordering</li>
+          <li>Retry & fault handling</li>
+          <li>Throughput vs latency analysis</li>
+        </ul>
+
+        <details class="learned">
+          <summary>What I learned</summary>
+          <p>
+            Scheduling is about trade-offs — correctness,
+            fairness, and performance rarely peak together.
+          </p>
+        </details>
+
+        <div class="tech-stack">
+          <span>Java</span><span>Multithreading</span><span>Schedulers</span>
+        </div>
+
+        <a href="https://github.com/bhaviniawasthi1/distributed-task-scheduler" target="_blank">View Code →</a>
+      </article>
+
+      <article class="project-card reveal">
+        <h3>API-Based Task Management & Rate-Limited Backend</h3>
+        <p>
+          End-to-end backend with validation,
+          <strong>rate limiting</strong>, and unit testing.
+        </p>
+        <ul>
+          <li>REST APIs with error handling</li>
+          <li>In-memory rate limiting</li>
+          <li>JUnit-based testing</li>
+        </ul>
+
+        <details class="learned">
+          <summary>What I learned</summary>
+          <p>
+            How testing, validation, and limits transform
+            simple APIs into production-ready services.
+          </p>
+        </details>
+
+        <div class="tech-stack">
+          <span>Java</span><span>Spring Boot</span><span>JUnit</span>
+        </div>
+
+        <a href="https://github.com/bhaviniawasthi1/taskflow-ratelimited-api" target="_blank">View Code →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FUN PROJECTS -->
+  <section class="projects-section fun">
+    <h2 class="section-title reveal">Fun & Fundamentals</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card mini reveal">
+        <h3>Task Manipulator (CLI)</h3>
+        <p>Command-line to-do manager with CRUD operations.</p>
+        <details class="learned">
+          <summary>What I learned</summary>
+          <p>Modular design, clean control flow, and logical decomposition.</p>
+        </details>
+        <div class="tech-stack">
+          <span>Java</span><span>DSA</span>
+        </div>
+      </article>
+
+      <article class="project-card mini reveal">
+        <h3>Number Guessing Game</h3>
+        <p>Interactive game using loops and randomization.</p>
+        <details class="learned">
+          <summary>What I learned</summary>
+          <p>Input validation and managing state-driven logic.</p>
+        </details>
+        <div class="tech-stack">
+          <span>Java</span><span>Logic</span>
+        </div>
+      </article>
+
+      <article class="project-card mini reveal">
+        <h3>Simple Calculator</h3>
+        <p>Arithmetic calculator with proper control flow.</p>
+        <details class="learned">
+          <summary>What I learned</summary>
+          <p>Edge cases and correctness even in small programs.</p>
+        </details>
+        <div class="tech-stack">
+          <span>Java</span><span>Basics</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/footer.js"></script>
+
+</body>
+</html>

@@ -3,147 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhavini Awasthi | Software Developer Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
 
-  <meta name="description" content="Bhavini Awasthi | Computer Science undergraduate and backend-focused software developer skilled in Java, REST APIs, system design, and scalable backend systems.">
-  <meta name="keywords" content="Bhavini Awasthi, Software Developer, Backend Engineer, Java Developer, SDE Portfolio, Computer Science Student, REST APIs, System Design">
-  <meta name="author" content="Bhavini Awasthi">
-  <meta property="og:title" content="Bhavini Awasthi | Software Developer Portfolio">
-  <meta property="og:description" content="Backend-focused Computer Science undergraduate skilled in Java, REST APIs, and scalable systems.">
-  <meta property="og:type" content="website">
+  <title>Bhavini Awasthi | Software Developer</title>
+  <meta name="description" content="Bhavini Awasthi — Computer Science undergraduate & backend-focused Software Developer." />
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/index.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Bhavini Awasthi</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="projects/projects.html">Projects</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Navbar -->
+  <header class="site-header">
+    <div id="navbar-placeholder"></div>
   </header>
 
-  <!-- HERO / INTRO -->
-  <section class="section">
-    <h2>Hi, I’m Bhavini 👋</h2>
-    <p>
-      Computer Science undergraduate | Backend & Systems Enthusiast <br>
-      Aspiring Software Development Engineer (SDE)
-    </p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-container">
 
-    <p>
-      I build Java-based backend systems, work with REST APIs, and enjoy solving
-      scalability and performance problems using strong CS fundamentals.
-    </p>
+      <div class="hero-left reveal">
+        <span class="pill">Aspiring Software Development Engineer</span>
 
-    <div style="margin-top: 1.5rem;">
-      <a href="resume.pdf" target="_blank" style="margin-right: 1rem;">📄 View Resume</a>
-      <a href="https://github.com/bhaviniawasthi1" target="_blank" style="margin-right: 1rem;">💻 GitHub</a>
-      <a href="https://www.linkedin.com/in/bhaviniawasthi" target="_blank">🔗 LinkedIn</a>
+        <h1>
+          Building <span>robust systems</span>
+          with clarity & correctness.
+        </h1>
+
+        <p>
+          I’m <strong>Bhavini</strong>, a Computer Science undergraduate who enjoys
+          designing backend systems, writing clean Java code,
+          and solving engineering problems with strong fundamentals.
+        </p>
+
+        <div class="hero-actions">
+          <a href="assets/resume.pdf" target="_blank" class="btn primary">Resume</a>
+          <a href="experience.html" class="btn ghost">Explore experience</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="avatar-frame">
+          <img src="assets/bhavini-awasthi.jpg" alt="Bhavini Awasthi Avatar" />
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Science undergraduate at Birla Institute of Technology, Mesra,
-      with strong foundations in Data Structures, Algorithms, and Object-Oriented Programming.
-      I enjoy building Java-based backend systems and solving real-world engineering problems
-      involving scalability, performance, and correctness.
-    </p>
-    <p>
-      My experience includes developing RESTful APIs, multithreaded systems, and backend
-      components such as caches, schedulers, and rate limiters. I am comfortable working
-      with Git, Linux environments, and structured software development workflows.
-    </p>
-  </section>
+  <!-- Featured -->
+  <section class="featured">
+    <h2>Featured</h2>
+    <p class="subtitle">What I’m actively working on and improving.</p>
 
-  <!-- EDUCATION -->
-  <section id="education" class="section">
-    <h2>Education</h2>
+    <div class="featured-grid">
 
-    <div class="card">
-      <h3>Bachelor of Technology (B.Tech) – Computer Science & Engineering</h3>
-      <p>Birla Institute of Technology, Mesra, Ranchi</p>
-      <p><strong>CGPA:</strong> 9.52 (Till 5th Semester)</p>
-      <p><strong>Duration:</strong> 2023 – 2027</p>
-    </div>
+      <a href="projects.html" class="feature-card reveal">
+        <h3>Live Projects</h3>
+        <p>Backend systems, schedulers, APIs, and engineering-driven projects.</p>
+        <span>View Projects →</span>
+      </a>
 
-    <div class="card">
-      <h3>Senior Secondary (Class XII)</h3>
-      <p>B.N.S.D. Shiksha Niketan I.C., Kanpur, Uttar Pradesh</p>
-      <p><strong>Percentage:</strong> 91.4%</p>
-      <p><strong>Year:</strong> 2023</p>
-    </div>
+      <a href="https://github.com/bhaviniawasthi1" target="_blank" class="feature-card reveal">
+        <h3>GitHub</h3>
+        <p>Clean repositories showcasing structure and thoughtful problem solving.</p>
+        <span>Explore Code →</span>
+      </a>
 
-    <div class="card">
-      <h3>Matriculation (Class X)</h3>
-      <p>B.N.S.D. Shiksha Niketan I.C., Kanpur, Uttar Pradesh</p>
-      <p><strong>Percentage:</strong> 93%</p>
-      <p><strong>Year:</strong> 2021</p>
+      <a href="https://leetcode.com/" target="_blank" class="feature-card reveal">
+        <h3>LeetCode</h3>
+        <p>Focused DSA practice with attention to patterns and edge cases.</p>
+        <span>Visit Profile →</span>
+      </a>
+
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-
-    <div class="card">
-      <h3>Java Programming Intern</h3>
-      <p><strong>VaultofCodes</strong> — Remote</p>
-      <p><strong>Duration:</strong> July 2024 – August 2024</p>
-
-      <ul>
-        <li>Developed modular Java applications using object-oriented design principles.</li>
-        <li>Debugged logic-heavy programs and improved code readability and maintainability.</li>
-        <li>Solved time-bound programming tasks simulating real-world development workflows.</li>
-      </ul>
-    </div>
+  <!-- CTA -->
+  <section class="cta reveal">
+    <h2>Let’s build something meaningful.</h2>
+    <p>Open to discussions, internships, and SDE opportunities.</p>
+    <a href="contact.html" class="btn primary">Get in Touch</a>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2>Skills & Tech Stack</h2>
-
-    <div class="card">
-      <h3>Programming Languages</h3>
-      <p>Java, Python, C</p>
-    </div>
-
-    <div class="card">
-      <h3>Backend & Systems</h3>
-      <p>RESTful APIs, Multithreading, Rate Limiting, Caching, System Design Fundamentals</p>
-    </div>
-
-    <div class="card">
-      <h3>Core Computer Science</h3>
-      <p>Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks</p>
-    </div>
-
-    <div class="card">
-      <h3>Tools & Platforms</h3>
-      <p>Git, Linux, IntelliJ IDEA, VS Code, Windows</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>
-      © 2026 Bhavini Awasthi •
-      <a href="https://github.com/bhaviniawasthi1" target="_blank">GitHub</a> •
-      <a href="https://www.linkedin.com/in/bhaviniawasthi" target="_blank">LinkedIn</a>
-    </p>
-  </footer>
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/footer.js"></script>
 
 </body>
 </html>

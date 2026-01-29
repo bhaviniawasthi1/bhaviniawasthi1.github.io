@@ -1,0 +1,131 @@
+/* =========================================================
+   SITE FOOTER (IMMUNIZED)
+   This file is the SINGLE source of truth for footer styling.
+   Footer is fully isolated from page-level CSS.
+========================================================= */
+
+/* ---------- HARD ISOLATION LAYER ---------- */
+.site-footer {
+  /* Reset inherited & global styles safely */
+  all: revert;
+  display: block;
+  isolation: isolate;
+  position: relative;
+
+  margin-top: 6rem;
+  background:
+    radial-gradient(circle at top, rgba(168,85,247,0.12), transparent),
+    rgba(2, 6, 23, 0.92);
+
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Prevent global resets / typography leaks */
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- MAIN WRAPPER ---------- */
+.site-footer .footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3.5rem 2rem 2.8rem;
+
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ---------- BRAND ---------- */
+.site-footer .footer-brand h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+
+  background: linear-gradient(135deg, #14b8a6, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.site-footer .footer-brand p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  max-width: 360px;
+}
+
+/* ---------- LINKS ---------- */
+.site-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.site-footer .footer-links a {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: #5eead4;
+  transform: translateX(4px);
+}
+
+/* ---------- SOCIAL ---------- */
+.site-footer .footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.site-footer .footer-social a {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.site-footer .footer-social a:hover {
+  color: #60a5fa;
+  transform: translateX(4px);
+}
+
+/* ---------- BOTTOM STRIP ---------- */
+.site-footer .footer-bottom {
+  padding: 1.4rem 2rem 1.8rem;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .site-footer .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.2rem;
+  }
+
+  .site-footer .footer-brand p {
+    margin: auto;
+  }
+
+  .site-footer .footer-links,
+  .site-footer .footer-social {
+    align-items: center;
+  }
+
+  .site-footer .footer-links a:hover,
+  .site-footer .footer-social a:hover {
+    transform: none;
+  }
+}
