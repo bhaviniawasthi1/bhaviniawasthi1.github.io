@@ -136,10 +136,10 @@ a {
   display: block;
 }
 
-@keyframes glow {
+/*@keyframes glow {
   from { filter: hue-rotate(0deg); }
   to { filter: hue-rotate(360deg); }
-}
+}*/
 
 /* =========================================================
    FEATURED SECTION
