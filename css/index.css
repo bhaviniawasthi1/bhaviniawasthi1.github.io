@@ -124,14 +124,16 @@ a {
 
 .avatar-frame {
   padding: 6px;
-  border-radius: 28px;
+  border-radius: 50%;
   background: linear-gradient(135deg, #14b8a6, #a855f7, #f59e0b);
   animation: glow 6s linear infinite;
 }
 
 .avatar-frame img {
   width: 280px;
-  border-radius: 22px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
   background: #020617;
   display: block;
 }
